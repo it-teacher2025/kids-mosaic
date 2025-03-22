@@ -1,0 +1,381 @@
+:root {
+    --color-border: #000;
+    --color-opacity: rgba(255, 255, 255, 0);
+}
+
+/* ================================================ */
+/* ================ ОСНОВНЫЕ СТИЛИ ================ */
+/* .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+} */
+  
+
+/* ШРИФТ */
+.output {
+  font-family: "Kablammo", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 0;
+}
+
+
+/* КОНТЕЙНЕР */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+    .container {
+        width: 448px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .container {
+        width: 752px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+  
+
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+  
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+  
+.list {
+    list-style: none;
+}
+  
+.link {
+    text-decoration: none;
+}
+/* ============ End of ОСНОВНЫЕ СТИЛИ ============== */
+/* ================================================ */
+
+
+
+/* ================================================ */
+/* ================= СТИЛИ в MAIN ================= */
+
+.level-section {
+    background-image: url(../img/background3.jpg);
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+@media screen and (min-width: 480px) {
+    .level-section {
+        display: block;
+    }
+}
+@media screen and (min-width: 768px) {
+    .level-section {
+        display: flex;
+        height: 586px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .level-section {
+        height: 700px;
+    }
+}
+
+  
+.div-left,
+.div-right-top,
+.div-right-bottom {
+    border: solid 2px var(--color-border);
+    border-radius: 16px;
+}
+
+.div-left {
+    padding: 8px;
+    width: 94%;
+}
+@media screen and (min-width: 480px) {
+    .div-left {
+        width: 428px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .div-left {
+        width: 532px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .div-left {
+        width: 860px;
+    }
+}
+  
+
+.div-right {
+    display: flex;
+    width: 100%;
+}
+@media screen and (min-width: 480px) {
+    .div-right {
+        display: flex;
+        width: 448px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .div-right {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 180px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .div-right {
+        width: 270px;
+    }
+}
+  
+
+.div-right-top {
+    width: 50%;
+    height: 220px;
+    padding: 8px;
+}
+@media screen and (min-width: 768px) {
+    .div-right-top {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .div-right-top {
+        height: 300px;
+        padding: 16px;
+    }
+}
+  
+   
+.div-right-bottom {
+    width: 50%;
+    height: 220px;
+    padding: 8px;
+}
+@media screen and (min-width: 768px) {
+    .div-right-bottom {
+        width: 100%;
+        height: 300px;
+        padding: 8px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .div-right-bottom {
+        padding: 16px;
+    }
+}
+  
+   
+
+/* ============ End of СТИЛИ в MAIN =============== */
+/* ================================================ */
+
+
+/* ================================================ */
+/* ================= СТИЛИ палетки мозаики ======== */
+.mosaic-palette {
+    display: grid;
+    grid-template-columns: repeat(15, minmax(10px, 48px));
+    gap: 4px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}  
+.mosaic-palette .item-empty {
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-opacity);
+    border: solid 1px var(--color-border);
+    border-radius: 4px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    transition: transform 250ms ease-in-out;
+}  
+.mosaic-palette .item-empty:hover {
+    transform: scale(1.1);
+}
+@media screen and (min-width: 254px) {
+    .mosaic-palette .item-empty {
+        width: 14px;
+        height: 14px;
+    }
+}
+@media screen and (min-width: 280px) {
+    .mosaic-palette .item-empty {
+        width: 16px;
+        height: 16px;
+    }
+}
+@media screen and (min-width: 318px) {
+    .mosaic-palette .item-empty {
+        width: 18px;
+        height: 18px;
+    }
+}
+@media screen and (min-width: 348px) {
+    .mosaic-palette .item-empty {
+        width: 20px;
+        height: 20px;
+    }
+}
+@media screen and (min-width: 480px) {
+    .mosaic-palette {
+        grid-template-columns: repeat(15, minmax(10px, 30px));
+        width: 430px;
+        margin-top: 0px;
+    }
+    .mosaic-palette .item-empty {
+        width: 24px;
+        height: 24px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .mosaic-palette {
+        grid-template-columns: repeat(15, minmax(20px, 40px));
+        width: 500px;
+        margin-top: 16px;
+    }
+    .mosaic-palette .item-empty {
+        width: 30px;
+        height: 30px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .mosaic-palette {
+        grid-template-columns: repeat(15, minmax(30px, 48px));
+        width: 614px;
+    }
+    .mosaic-palette .item-empty {
+        width: 38px;
+        height: 38px;
+    }
+}
+  
+
+
+.output {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    height: 60px;
+}  
+.color-palette {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 36px;
+}  
+.color-palette .item-color {
+    padding: 0;
+    margin: 0;
+    border: solid 1px var(--color-border);
+    border-radius: 4px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    transition: transform 250ms ease-in-out;
+}  
+.color-palette .item-color:hover {
+    transform: scale(1.1);
+}
+@media screen and (min-width: 254px) {
+    .color-palette {
+        gap: 8px;
+        margin-top: 36px;
+    }
+    .color-palette .item-color {
+        width: 18px;
+        height: 18px;
+    }
+}
+@media screen and (min-width: 318px) {
+    .color-palette {
+        margin-top: 44px;
+    }
+}
+@media screen and (min-width: 348px) {
+    .color-palette .item-color {
+        width: 20px;
+        height: 20px;
+    }
+}
+@media screen and (min-width: 480px) {
+    .color-palette {
+        margin-top: 4px;
+    }
+    .color-palette .item-color {
+        width: 30px;
+        height: 30px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .color-palette {
+        margin-top: 4px;
+    }
+    .color-palette .item-color {
+        width: 36px;
+        height: 36px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .color-palette {
+        margin-top: 8px;
+    }
+    .color-palette .item-color {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+
+/* ============ End of СТИЛИ палетки мозаики ====== */
+/* ================================================ */
+
+
+/* Для медиаадаптации */
+/* @media screen and (min-width: 480px) {
+
+} */
+/* @media screen and (min-width: 768px) {
+
+} */
+/* @media screen and (min-width: 1200px) {
+
+}*/
